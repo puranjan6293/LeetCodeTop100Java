@@ -9,6 +9,18 @@ we start with a for loop that iterates through the array, and for each element,
 we use two pointers to find pairs of elements in the remaining part of the array that sum to -nums[i].
 In each iteration we also check for duplicate numbers to avoid duplicate triplets.
 This solution has O(n^2) time complexity and O(n) space complexity. */
+
+//T.C calculation
+/*The outer loop iterates through the array and runs in O(n) time.
+For each iteration of the outer loop, we use two pointers to find pairs of elements in the
+remaining part of the array that sum to -nums[i], and we move the pointers accordingly.
+The inner loop is controlled by the pointers, 
+which take O(n) time to iterate through the remaining part of the array.
+
+So the time complexity for the nested loop is O(n) * O(n) = O(n^2)
+Additionally, we also skip the duplicate numbers in both while and for loop, which takes O(n) time.
+
+So the final time complexity would be O(n^2) + O(n) = O(n^2) */
 public class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
