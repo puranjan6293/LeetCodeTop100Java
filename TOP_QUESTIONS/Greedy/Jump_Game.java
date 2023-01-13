@@ -24,3 +24,8 @@ public class Jump_Game {
         return false;
     }
 }
+/*
+ For example, if we're at position i = 2 and nums[i] = 3,
+  we can jump to position i + nums[i] = 2 + 3 = 5. 
+  So the maximum reachable index from position i = 2 is 5.
+ */
