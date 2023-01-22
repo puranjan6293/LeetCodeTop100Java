@@ -1,0 +1,49 @@
+// Here is a template for solving depth first search (DFS) problems in Java:
+
+/*This template can be used to solve a wide variety of DFS problems on graphs, 
+by making appropriate modifications to the dfsUtil() method. */
+class DFS {
+    private boolean[] visited; // array to keep track of visited nodes
+
+    public void dfs(int start) {
+        visited = new boolean[n]; // n = number of nodes
+        dfsUtil(start);
+    }
+
+    private void dfsUtil(int node) {
+        visited[node] = true;
+        // perform any operations on the current node here
+
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                dfsUtil(i);
+            }
+        }
+    }
+}
+/*
+You can also use stack or recursion to write DFS algorithm. */
+
+class DFS {
+    private boolean[] visited; // array to keep track of visited nodes
+
+    public void dfs(int start) {
+        visited = new boolean[n]; // n = number of nodes
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(start);
+        visited[start] = true;
+
+        while (!stack.empty()) {
+            int node = stack.pop();
+            // perform any operations on the current node here
+
+            for (int i = 0; i < n; i++) {
+                if (!visited[i]) {
+                    stack.push(i);
+                    visited[i] = true;
+                }
+            }
+        }
+    }
+}
+This template can be used for DFS traversal of graph.
