@@ -1,0 +1,32 @@
+public class Solution {
+    private boolean solved = false;
+    
+    public void backtrack(int currentStep, int[] path, int[] choices) {
+        if (currentStep == path.length) {
+            // all steps have been taken, check if the solution is valid
+            if (isValid(path)) {
+                // solution found, update the `solved` flag and stop searching
+                solved = true;
+                return;
+            }
+        } else {
+            // take each choice one by one
+            for (int choice : choices) {
+                path[currentStep] = choice;
+                if (!solved) {
+                    backtrack(currentStep + 1, path, choices);
+                }
+            }
+        }
+    }
+    
+    public boolean isValid(int[] path) {
+        // return true if the solution represented by `path` is valid
+        // return false otherwise
+    }
+    
+    public void solve() {
+        int[] path = new int[N]; // N is the number of steps to take
+        backtrack(0, path, choices);
+    }
+}
