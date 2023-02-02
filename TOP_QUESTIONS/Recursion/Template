@@ -1,0 +1,18 @@
+/*Identify the base case(s): Determine when the recursion should stop. 
+This is typically the simplest possible input or the smallest subproblem.
+
+Define the recursive case: Define how the problem should be broken down into smaller subproblems.
+
+Write the function: Write a function that takes the input and breaks it down into
+ smaller subproblems until it reaches the base case.
+*/
+// Example:
+public int solveRecursion(int input) {
+  // Base case(s)
+  if (input <= 0) {
+    return 0;
+  }
+  // Recursive case
+  return solveRecursion(input - 1) + input;
+}
+//Note: This is just a basic template and can be adapted to the specific requirements of different problems.
