@@ -1,0 +1,15 @@
+Here is a general template for understanding and solving Memoization Algorithm Leetcode problems in Java:
+
+Understanding the problem: Read the problem statement carefully and try to understand the nature of the problem, the input format, and the expected output format. Try to identify if the problem can be solved using dynamic programming, and if it can be optimized using memoization.
+
+Identifying subproblems: Identify the subproblems in the given problem that can be solved using dynamic programming.
+
+Define the state: Define the state of the problem. The state is typically represented as a set of parameters that describe the current state of the problem. For example, if the problem involves finding the maximum sum of a path in a matrix, the state can be represented as the current cell in the matrix (i, j) and the current sum of the path.
+
+Define the state transition: Define the state transition, which is the process of moving from one state to another. In the example above, the state transition can be moving from one cell (i, j) to another cell (i + 1, j) or (i, j + 1).
+
+Define the base case: Define the base case, which is the state that ends the recursive function. In the example above, the base case can be when the current cell is outside the boundary of the matrix.
+
+Implement the solution: Implement the solution using a recursive function that takes the current state as input and returns the solution for that state. Use memoization to store the results of the subproblems and avoid recalculating the same subproblems multiple times.
+
+Test the solution: Test the solution using the provided test cases and edge cases to make sure that it is correct and efficient.
