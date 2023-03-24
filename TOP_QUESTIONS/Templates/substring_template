@@ -1,0 +1,31 @@
+public int findSubstring(String s) {
+    int[] map = new int[128];
+    int counter; // check whether the substring is valid
+    int begin = 0, end = 0; // two pointers, one point to tail and one head
+    int d = 0; // the length of substring
+
+    // initialize the hash map here
+    for (int i = 0; i < s.length(); i++) {
+        map[s.charAt(i)]++;
+    }
+
+    while (end < s.length()) {
+
+        if (map[s.charAt(end++)]-- > 0) {
+            // modify counter here
+        }
+
+        while (/* counter condition */) {
+
+            /* update d here if finding minimum */
+
+            // increase begin to make it invalid/valid again
+            if (map[s.charAt(begin++)]++ >= 0) {
+                // modify counter here
+            }
+        }
+
+        /* update d here if finding maximum */
+    }
+    return d;
+}
