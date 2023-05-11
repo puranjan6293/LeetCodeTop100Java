@@ -2,6 +2,8 @@ package TOP_QUESTIONS.LikedQuestions;
 
 public class Add_Two_Numbers_as_LinkedList {
     /*
+    //!Carry   = sum/10
+    //!size of new Linkedlist = sum%10
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         //Approach: Using Recursion, T.C: O(n)
         //call the helper function
