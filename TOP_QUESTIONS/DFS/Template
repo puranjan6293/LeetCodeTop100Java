@@ -1,7 +1,21 @@
 // Here is a template for solving depth first search (DFS) problems in Java:
 
 /*This template can be used to solve a wide variety of DFS problems on graphs, 
-by making appropriate modifications to the dfsUtil() method. */
+by making appropriate modifications to the dfsUtil() method.
+
+*DFS (Depth-First Search) is a popular graph traversal algorithm that explores as far as possible along
+ each branch before backtracking
+
+*The basic idea behind DFS is to visit a vertex and then recursively explore all of its unvisited neighbors. 
+ Here's a step-by-step explanation of how DFS works:
+ 1.Start by selecting a starting vertex in the graph.
+ 2.Mark the starting vertex as visited.
+ 3.Explore one of the unvisited neighbors of the current vertex. You can choose any unvisited neighbor arbitrarily.
+ 4.If there are no unvisited neighbors, backtrack to the previous vertex.
+Repeat steps 3 and 4 until all vertices have been visited.
+
+*/
+
 class DFS {
     private boolean[] visited; // array to keep track of visited nodes
 
@@ -46,4 +60,4 @@ class DFS {
         }
     }
 }
-This template can be used for DFS traversal of graph.
+//This template can be used for DFS traversal of graph.

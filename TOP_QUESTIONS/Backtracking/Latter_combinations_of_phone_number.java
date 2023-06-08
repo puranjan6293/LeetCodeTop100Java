@@ -18,8 +18,8 @@ public class Latter_combinations_of_phone_number {
         if(digits.length() == 0) {
             return ls;
         }
-        StringBuilder sb = new StringBuilder();
-        backtrack(sb, digits, ls, phone, 0);
+        
+        backtrack(new StringBuilder();, digits, ls, phone, 0);
         return ls;
     }
     
