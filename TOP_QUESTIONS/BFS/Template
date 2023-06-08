@@ -1,4 +1,18 @@
-/*Here is a template for solving a LeetCode question using the Breadth First Search (BFS) algorithm in Java:*/
+/*Here is a template for solving a LeetCode question using the Breadth First Search (BFS) algorithm in Java:
+ * The Breadth-First Search (BFS) algorithm is another graph traversal algorithm that explores all the vertices of a graph in a breadthward motion. It starts at a given source vertex, explores all its neighbors, then moves to their neighbors, and so on, until all vertices have been visited.
+
+ * Here's a step-by-step explanation of how the BFS algorithm works:
+
+ * Choose a starting vertex and mark it as visited.
+ * Enqueue the starting vertex into a queue (FIFO data structure).
+ * While the queue is not empty:
+ * Dequeue a vertex from the queue.
+ * Process the dequeued vertex (e.g., print it or perform some operation on it).
+ * Enqueue all the unvisited neighbors of the dequeued vertex into the queue and mark them as visited.
+ * Repeat steps 3 until the queue is empty.
+ * The key difference between DFS and BFS lies in the order in which they explore the vertices. 
+ * While DFS explores the graph as deeply as possible before backtracking, BFS explores the graph layer by layer.
+*/
 
 class Solution {
     public <Return Type> <function name>(<input parameters>) {
