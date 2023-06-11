@@ -2,7 +2,7 @@ package TOP_QUESTIONS.Graph;
 
 public class rotting_oranges {
     public int orangesRotting(int[][] grid) {
-        //Approach: Using BFS
+        //Approach: Using BFS, T.C:O(m.n)
         int r = grid.length;
         int c = grid[0].length;
 
