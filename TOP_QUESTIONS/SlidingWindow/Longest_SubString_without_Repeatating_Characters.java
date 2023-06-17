@@ -1,31 +1,33 @@
-package TOP_QUESTIONS.SlidingWindow;
-
-import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class Longest_SubString_without_Repeatating_Characters {
-    public int lengthOfLongestSubstring(String s) {
-        //Approach: Using HashMap and Sliding Window T.C: O(n)
-        //Map to store the last index at which each character was seen
-        HashMap<Character, Integer> map = new HashMap<>();
-        // The length of the longest substring without repeating characters
-        int maxLength = 0;
-        // The starting index (left) of the current substring
+    public static int lengthOfLongestSubstring(String s) {
+        //Approach: Using Sliding Window & HashSet
+        //initialize the required variables
         int left = 0;
-        // Iterate through each character in the string
+        int ans = 0;
+        //initialize the HashSet
+        HashSet<Character> set = new HashSet<>();
+        //traverse through the string
         for(int right = 0;right<s.length();right++){
-            char c = s.charAt(right);
-             // If the character has been seen before, update the start index
-             // to be the maximum of the current start index and the index of
-             // the character + 1
-             if(map.containsKey(c)){
-                 left = Math.max(left, map.get(c)+1);
-             }
-             // Update the max length if necessary
-             maxLength = Math.max(maxLength, right-left+1);
-             // Store the index of the character in the map
-             map.put(c, right);
+            while(set.contains(s.charAt(right))){
+                //remove the left value and increment one window
+                set.remove(s.charAt(left));
+                left++;
+            }
+            //add the current or called right value to the set
+            set.add(s.charAt(right));
+            //length of the substring will be:
+            //       rightPointer-leftPointer+1
+            ans = Math.max(ans, right-left+1);
         }
-        //return the maxLength
-        return maxLength;
+        return ans;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String: ");
+        String s = sc.next();
+        System.out.println("the length of the longest substring without rpc is: "+ lengthOfLongestSubstring(s));
     }
 }
