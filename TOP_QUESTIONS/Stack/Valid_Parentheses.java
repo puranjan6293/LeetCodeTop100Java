@@ -1,37 +1,26 @@
-package TOP_QUESTIONS.Stack;
-
+import java.util.Scanner;
 import java.util.Stack;
 
 public class Valid_Parentheses {
-    public boolean isValid(String s) {
-        /*
+    public static boolean isValid(String s) {
         //Approach: Using Stack
-        //create a stack
         Stack<Character> st = new Stack<>();
-        for(int i=0;i<s.length();i++){
-            char a = s.charAt(i);
-            if(a=='(' || a=='{' || a=='['){
-                st.push(a);
+        //traverse through the string
+        for(char c:s.toCharArray()){
+            if(c=='(' || c=='[' || c=='{'){
+                st.push(c);
             }
-            else if(st.empty()) return false;
-            else if(a==')' && st.pop()!='(') return false;
-            else if(a=='}' && st.pop()!='{') return false;
-            else if(a==']' && st.pop()!='[') return false;
-        }
-        return st.empty();
-        */
-        //After Optimization, T.C : O(n)
-        Stack<Character> st = new Stack<>();
-        for(int i=0;i<s.length();i++){
-            char a = s.charAt(i);
-            if(a=='(' || a=='{' || a=='['){
-                st.push(a);
-            }
-            else if(a==')' && !st.empty() && st.peek()=='(') st.pop();
-            else if(a=='}' && !st.empty() && st.peek()=='{') st.pop();
-            else if(a==']' && !st.empty() && st.peek()=='[') st.pop();
+            else if(c==')' && !st.isEmpty() && st.peek()=='(') st.pop();
+            else if(c==']' && !st.isEmpty() && st.peek()=='[') st.pop();
+            else if(c=='}' && !st.isEmpty() && st.peek()=='{') st.pop();
             else return false;
         }
-        return st.empty();
+        return st.isEmpty();
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the string: ");
+        String s = sc.next();
+        System.out.println("Is valid string: "+isValid(s));
     }
 }
